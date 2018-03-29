@@ -251,18 +251,18 @@ void Edit_squad_screen::edit_squad(int sq_pos){
 	else
 		delete_squad_member(sq_pos);
 	
-	sq_vec = get_model_ptr()->get_player()->get_squad_vector();
+	std::vector<Squad> sq_vec_new = get_model_ptr()->get_player()->get_squad_vector();
 	std::cout << "The squad now has the following form" << std::endl;
 
 	std::cout << "======================================================= " << std::endl;
         std::cout << "======================================================= " << std::endl;
-	std::cout << sq_vec[sq_pos].get_squad_name() << std::endl;
+	std::cout << sq_vec_new[sq_pos].get_squad_name() << std::endl;
         std::cout << "======================================================= " << std::endl;
         std::cout << "======================================================= " << std::endl;
-	std::cout << "STATUS: " << sq_vec[sq_pos].get_status() << "     CREDITS: " << sq_vec[sq_pos].get_credits() << std::endl;
+	std::cout << "STATUS: " << sq_vec_new[sq_pos].get_status() << "     CREDITS: " << sq_vec_new[sq_pos].get_credits() << std::endl;
 	std::cout << "======================================================= " << std::endl;
 	std::cout << "MEMBERS: " << std::endl;
-	for (auto i = sq_vec[sq_pos].get_squad_members().begin(); i != sq_vec[sq_pos].get_squad_members().end(); ++i){
+	for (auto i = sq_vec_new[sq_pos].get_squad_members().begin(); i != sq_vec_new[sq_pos].get_squad_members().end(); ++i){
 		std::cout << " " << i->get_name() << std::endl;
 	}
 	std::cout << "======================================================= " << std::endl;

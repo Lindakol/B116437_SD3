@@ -48,9 +48,19 @@ int main(int argc, char **argv)
         std::cout << "======================================================= " << std::endl;
 	std::cout << " " << std::endl;
 	
-	std::cout << "Please register by giving a username, a password and an" << std::endl;
-	std::cout << "email address" << std::endl;
-	std::cin >> username >> password >> email;
+	std::cout << "======================================================= " << std::endl;
+	std::cout << "======================================================= " << std::endl;
+        std::cout << "                      REGISTER                          " << std::endl;
+        std::cout << "======================================================= " << std::endl;
+	std::cout << "======================================================= " << std::endl;
+        
+	
+	std::cout << "Please give a username" << std::endl;
+	std::cin >> username;
+	std::cout << "Please give a password" << std::endl;
+	std::cin >> password;
+	std::cout << "Please give an email" << std::endl;
+	std::cin >> email;
 
 	// Create the Model
 	std::shared_ptr<Model> model_ptr = std::make_shared<Model>(username, password, email);		
